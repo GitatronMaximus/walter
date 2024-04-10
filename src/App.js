@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import WalterProfile1 from './Assets/WalterProfile1.png';
 import WalterProfile2 from './Assets/WalterProfile2.png';
+import WalterProfile3 from './Assets/WalterProfile3.png';
 import usePreventImageDownload from './usePreventImageDownload.js';
 import Footer from './footer.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -29,7 +30,7 @@ function App() {
               <section id="origin-story">
                 <h2>The Walter Origin Story</h2>
                 <p>Walter, a Bull Terrier with an oddly human expression, became an internet sensation overnight...</p>
-                <img src={WalterProfile1} className="App-logo" alt="Walter Profile 1" />
+                <img src={WalterProfile3} className="App-logo" alt="Walter Profile 1" />
 
               </section>
               
@@ -43,7 +44,7 @@ function App() {
                 <ul>
                   <li>Walter's Wisdom: Daily doses of Walter's unique perspective...</li>
                   <li>Community Engagement: Interactive features where fans can share their own 'Walter moments'...</li>
-                  <li>Walter Airdrops: 5% of total supply reserved explicitly for community airdrops</li>                  
+                  <li>Walter Rewards: 5% of total supply reserved explicitly for community airdrops and prizes</li>                  
                 </ul>
               </section>
 
