@@ -51,10 +51,10 @@ function App() {
               <section id="join">
                 <h2>Joining the Pack</h2>
                 <p>Walter's World is more than a meme; it's a movement towards appreciating the simple joys and unspoken wisdom of everyday life...</p>
-                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="link solscan">
+                <a href="https://twitter.com/WalterWalt82052" target="_blank" rel="noopener noreferrer" className="link solscan">
                   Follow Twitter
                   </a>
-                  <a href="https://t.me/yourchannel" target="_blank" rel="noopener noreferrer" className="link solscan">
+                  <a href="https://t.me/WalterTheWise" target="_blank" rel="noopener noreferrer" className="link solscan">
                     Join Telegram
                   </a>
               </section>
