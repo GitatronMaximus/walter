@@ -11,7 +11,7 @@ function Footer() {
       <br />
       <br />
       <div className="social-links">
-          <a href="https://twitter.com/WalterWalt82052" className="social-link" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/Walter_TheWise" className="social-link" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} />
           </a>         
           <a href="https://t.me/WalterTheWise" className="social-link" target="_blank" rel="noopener noreferrer">

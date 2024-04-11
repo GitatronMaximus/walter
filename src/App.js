@@ -57,7 +57,7 @@ function App() {
                 that sees the world through the wise eyes of Walter. <br />Follow the links below and let's explore the wonders of 
                 wisdom together!
                 </p>
-                <a href="https://twitter.com/WalterWalt82052" className="social-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/Walter_TheWise" className="social-link" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTwitter} className="large-icon" />
                 </a>         
                 <a href="https://t.me/WalterTheWise" className="social-link" target="_blank" rel="noopener noreferrer">
