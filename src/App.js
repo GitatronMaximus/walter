@@ -41,10 +41,14 @@ function App() {
 
               <section id="offerings">
                 <h2>What We Offer</h2>
-                <ul>
+                <ul class="no-bullets sophisticated-list">
                   <li>Walter's Wisdom: Daily doses of Walter's unique perspective...</li>
                   <li>Community Engagement: Interactive features where fans can share their own 'Walter moments'...</li>
-                  <li>Walter Rewards: 5% of total supply reserved explicitly for community airdrops and prizes</li>                  
+                  <li>Walter Rewards: 4% of total supply reserved explicitly for community airdrops and prizes</li>
+                  <li>Walter's Wisdom: Dipping a mere 1% from our developers' stash to sow seeds of goodwill!</li> 
+                  <li>We're channeling this slice of our treasure trove into scholarships and preventive maintenance programs,</li> 
+                  <li>ensuring our growth sprouts benefits not just for us, but for the community garden at large.</li> 
+                  <li>Let's cultivate a legacy of giving, nurturing the future one scholarship and well-oiled gear at a time!</li>                  
                 </ul>
               </section>
 

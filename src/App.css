@@ -156,3 +156,31 @@
   display: block;
   text-align: center;
 }
+
+.no-bullets {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+}
+
+.sophisticated-list {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sophisticated font */
+  color: #333; /* Elegant text color */
+}
+
+.sophisticated-list li {
+  padding: 10px 0; /* Spacing between items */
+  border-bottom: 1px solid #ccc; /* Adds a subtle line between items */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+}
+
+.sophisticated-list li:before {
+  content: '✦'; /* Custom bullet symbol */
+  color: #007bff; /* Bullet color */
+  font-weight: bold; /* Make the bullet symbol bolder */
+  position: absolute; /* Positioning before the text */
+  left: -20px; /* Adjust as necessary */
+}
+
+.sophisticated-list li:last-child {
+  border-bottom: none; /* Removes border from the last item */
+}
