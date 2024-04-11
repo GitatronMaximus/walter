@@ -21,6 +21,7 @@ function App() {
           <header className="App-header">
             
             <h1>Welcome to Walter's World</h1>
+            <p>Token launch 4/12/2024 on Raydium</p>
               <a href="https://raydium.io/" target="_blank" rel="noopener noreferrer" className="link raydium">
                 Buy on Raydium
               </a>
