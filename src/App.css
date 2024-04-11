@@ -74,6 +74,11 @@
   50% { opacity: 0; }
 }
 
+@keyframes social-icon-rotateIn {
+  from { transform: rotateY(-360deg); }
+  to { transform: rotateY(0deg); }
+}
+
 .liquidity-info {
   animation: blink 1s linear infinite;
   background-color: #8e44ad; /* Example background color */
@@ -82,14 +87,34 @@
   border-radius: 5px;
 }
 
+.large-icon {
+  font-size: 2em; /* Double the size of the icon */
+  margin-right: 20px;
+  animation: social-icon-rotateIn 4s linear infinite;
+}
+
+.social-link {
+  margin-right: 10px;
+}
+
+.social-link i {
+  animation: social-icon-spin 4s linear infinite;
+}
 
 .social-link .fa-twitter {
   color: #1DA1F2; /* Twitter brand color */
-  margin-right: 10px;
 }
 
 .social-link .fa-telegram-plane {
   color: #0088cc; /* Telegram brand color */
+}
+
+.social-link .fa-tiktok {
+  color: #69C9D0; /* Telegram brand color */
+}
+
+.social-link .fa-youtube {
+  color: #FF0000; /* Telegram brand color */
 }
 
 .link-container {

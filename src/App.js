@@ -9,7 +9,7 @@ import WalterProfile3 from './Assets/WalterProfile3.png';
 import usePreventImageDownload from './usePreventImageDownload.js';
 import Footer from './footer.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faTelegramPlane, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -45,23 +45,30 @@ function App() {
                 <ul class="no-bullets sophisticated-list">
                   <li>Walter's Wisdom: Daily doses of Walter's unique perspective...</li>
                   <li>Community Engagement: Interactive features where fans can share their own 'Walter moments'...</li>
-                  <li>Walter Rewards: 4% of total supply reserved explicitly for community airdrops and prizes</li>
-                  <li>Walter's Wisdom: Dipping a mere 1% from our developers' stash to sow seeds of goodwill!</li> 
-                  <li>We're channeling this slice of our treasure trove into scholarships and preventive maintenance programs,</li> 
-                  <li>ensuring our growth sprouts benefits not just for us, but for the community garden at large.</li> 
-                  <li>Let's cultivate a legacy of giving, nurturing the future one scholarship and well-oiled gear at a time!</li>                  
+                  <li>Walter Rewards: 4% of total supply reserved explicitly for community airdrops and prizes</li>                  
                 </ul>
               </section>
 
               <section id="join">
                 <h2>Joining the Pack</h2>
-                <p>Walter's World is more than a meme; it's a movement towards appreciating the simple joys and unspoken wisdom of everyday life...</p>
-                <a href="https://twitter.com/Walter_TheWise" target="_blank" rel="noopener noreferrer" className="link solscan">
-                  Follow Twitter
-                  </a>
-                  <a href="https://t.me/WalterTheWise" target="_blank" rel="noopener noreferrer" className="link solscan">
-                    Join Telegram
-                  </a>
+                <p>Embark on a journey with "Walter's World," where every moment is a treasure trove of insight. 
+                It's not just a meme; it's a movement <br /> that celebrates the simple joys and silent wisdom of life. Dive deeper, 
+                engage, and connect with us <br />across our social media platforms. Join the pack and become part of a community 
+                that sees the world through the wise eyes of Walter. <br />Follow the links below and let's explore the wonders of 
+                wisdom together!
+                </p>
+                <a href="https://twitter.com/WalterWalt82052" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faTwitter} className="large-icon" />
+                </a>         
+                <a href="https://t.me/WalterTheWise" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faTelegramPlane} className="large-icon" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCQLyZTCcQpAaPegZKOfUc8Q" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faYoutube} className="large-icon" />
+                </a>
+                <a href="https://www.tiktok.com/@walter_thewise" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faTiktok} className="large-icon" />
+                </a>                
               </section>
               <br />
 
