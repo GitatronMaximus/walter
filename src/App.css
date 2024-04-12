@@ -209,3 +209,14 @@
 .sophisticated-list li:last-child {
   border-bottom: none; /* Removes border from the last item */
 }
+
+/* Stylesheet: styles.css */
+.flash-text {
+  animation: flashText 0.3s linear infinite alternate;
+  color: red; /* Set the color to red to simulate a siren */
+}
+
+@keyframes flashText {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

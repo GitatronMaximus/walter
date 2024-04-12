@@ -18,10 +18,18 @@ function App() {
   
     return (
         <div className="App">
+        <div className="siren-container">
+        <div className="siren-light"></div>
+        </div>
           <header className="App-header">
             
             <h1>Welcome to Walter's World</h1>
-            <p>Token launch 4/12/2024 on Raydium</p>
+            <p>OFFICIAL contract address: ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U</p>
+            <br />
+            <p> <span className="flash-text">Be sure to ONLY use this contract address and DO NOT search by name due to multiple scam projects
+            with similar name and picture!</span>
+            </p>
+            <br />
               <a href="https://raydium.io/" target="_blank" rel="noopener noreferrer" className="link raydium">
                 Buy on Raydium
               </a>
@@ -82,17 +90,17 @@ function App() {
                   Notice: 100% of initial liquidity LP tokens will be burned, ensuring a fair and secure launch.
                 </p>
               </section>
-              <a href="https://raydium.io/" target="_blank" rel="noopener noreferrer" className="link raydium">
+              <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
                 Buy on Raydium
               </a>
               <br />
               <br />
-              <a href="https://dexscreener.com/" target="_blank" rel="noopener noreferrer" className="link dexscreener">
+              <a href="https://dexscreener.com/solana/cfvtnecfbstaqrcgjoetunakghg1tryazxqj1ghgguqy" target="_blank" rel="noopener noreferrer" className="link dexscreener">
                 Find on Dexscreener
               </a>
               <br />
               <br />             
-              <a href="https://solscan.io/" target="_blank" rel="noopener noreferrer" className="link solscan">
+              <a href="https://https://solscan.io/token/ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U" target="_blank" rel="noopener noreferrer" className="link solscan">
                 View on Solscan
               </a>
               <br />
