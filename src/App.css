@@ -220,3 +220,43 @@
   from { opacity: 1; }
   to { opacity: 0; }
 }
+
+/* Fire animation CSS */
+@keyframes fireGlow {
+  0% { 
+    box-shadow: 0 0 10px 5px orange, 0 0 20px 10px red, 0 0 30px 15px yellow;
+  }
+  50% { 
+    box-shadow: 0 0 15px 7px red, 0 0 25px 12px orange, 0 0 35px 17px yellow;
+  }
+  100% { 
+    box-shadow: 0 0 10px 5px orange, 0 0 20px 10px red, 0 0 30px 15px yellow;
+  }
+}
+
+.fire-effect {
+  display: inline-block;
+  animation: fireGlow 2s ease-in-out infinite;
+  position: relative;
+}
+
+/* Stylesheet: styles.css */
+.burn-transaction-link {
+  padding: 10px 20px;
+  background-color: #f44336; /* Red color for urgency */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.burn-transaction-link:hover {
+  background-color: #d32f2f; /* A darker shade of red on hover */
+  transform: translateY(-2px); /* Slight raise effect on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow for depth */
+}
+
+.burn-transaction-link:active {
+  transform: translateY(1px); /* Push effect when clicked */
+}

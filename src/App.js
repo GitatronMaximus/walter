@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import WalterProfile1 from './Assets/WalterProfile1.png';
 import WalterProfile2 from './Assets/WalterProfile2.png';
 import WalterProfile3 from './Assets/WalterProfile3.png';
+import WalterBurnInitialLiquidity from './Assets/WalterBurnInitialLiquidity.png';
 import usePreventImageDownload from './usePreventImageDownload.js';
 import Footer from './footer.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,17 +23,21 @@ function App() {
         <div className="siren-light"></div>
         </div>
           <header className="App-header">
-            
+            <section>
             <h1>Welcome to Walter's World</h1>
-            <p>OFFICIAL contract address: ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U</p>
+              <p>OFFICIAL contract address: ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U</p>
             <br />
-            <p> <span className="flash-text">Be sure to ONLY use this contract address and DO NOT search by name due to multiple scam projects
-            with similar name and picture!</span>
-            </p>
-            <br />
-              <a href="https://raydium.io/" target="_blank" rel="noopener noreferrer" className="link raydium">
-                Buy on Raydium
-              </a>
+              <p> <span className="flash-text">Be sure to ONLY use this contract address and DO NOT search by name due to multiple scam projects
+              with similar name and picture!</span>
+              </p>
+                <br />
+                  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
+                    Buy on Raydium
+                  </a>
+                <br />
+                <br />
+            </section>
+
               <p>Dive Into the Whimsical World of Walter, Where Simplicity Meets Genius</p>
               <img src={WalterProfile2} className="dance-image" alt="Walter Profile 1" />
           </header>
@@ -85,10 +90,28 @@ function App() {
               <br />
 
               <section id="liquidity-info">
-                <h2>Initial Liquidity Lock</h2>
+                <h2>Initial Liquidity Locked by Burn</h2>
                 <p style={{ fontWeight: 'bold' }}>
-                  Notice: 100% of initial liquidity LP tokens will be burned, ensuring a fair and secure launch.
+                  Notice: 100% of initial liquidity LP tokens HAS BEEN BURNED, ensuring a fair and secure launch.
                 </p>
+                <br />
+                  <a href="https://solscan.io/tx/2QwZQbW24qFqqxKcir9sErZKQt86mRwejov98YhbP3XUZvjH4DhgakppiLw8MyhpzUgu7BJJHwAcq6JKpB8TG65F" target="_blank" rel="noopener noreferrer"
+                  className="burn-transaction-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   View Burn Transaction
+                  </a>
+                <br />
+                <br />
+                <br />
+                <br />
+                 <div className="fire-effect">
+                  <img src={WalterBurnInitialLiquidity} className="App-logo" alt="Walter Initial Liquidity Burn" />
+                 </div>
+                 <br />
+                 <br />
+                 <br />
+
               </section>
               <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
                 Buy on Raydium
