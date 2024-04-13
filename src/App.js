@@ -27,7 +27,7 @@ function App() {
             <h1>Welcome to Walter's World</h1>
               <p>OFFICIAL contract address: ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U</p>
             <br />
-              <p> <span className="flash-text">Be sure to ONLY use this contract address and DO NOT search by name due to multiple scam projects
+              <p> <span className="flash-text">Be sure to ONLY use this contract address<br /> and DO NOT search by name due to multiple <br />scam projects
               with similar name and picture!</span>
               </p>
                 <br />
