@@ -10,7 +10,7 @@ import WalterBurnInitialLiquidity from './Assets/WalterBurnInitialLiquidity.png'
 import usePreventImageDownload from './usePreventImageDownload.js';
 import Footer from './footer.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTelegramPlane, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faTelegramPlane, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -79,9 +79,6 @@ function App() {
                 </a>         
                 <a href="https://t.me/WalterTheWise" className="social-link" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTelegramPlane} className="large-icon" />
-                </a>
-                <a href="https://www.youtube.com/channel/UCQLyZTCcQpAaPegZKOfUc8Q" className="social-link" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faYoutube} className="large-icon" />
                 </a>
                 <a href="https://www.tiktok.com/@walter_thewise" className="social-link" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTiktok} className="large-icon" />
