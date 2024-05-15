@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import WalterProfile1 from './Assets/WalterProfile1.png';
 import WalterProfile2 from './Assets/WalterProfile2.png';
 import WalterProfile3 from './Assets/WalterProfile3.png';
+import AlgorandLogo from './Assets/AlgorandLogo.png';
 import WalterBurnInitialLiquidity from './Assets/WalterBurnInitialLiquidity.png';
 import usePreventImageDownload from './usePreventImageDownload.js';
 import Footer from './footer.js';
@@ -27,9 +28,10 @@ function App() {
             <h1>Welcome to Walter's World</h1>
               {/* <p>OFFICIAL solana contract address: ADu7Da8Thv9CBwYdXXcoWnw<br />UXD5MWRs9APr3Fqxiwc2U</p> */}
               <p>Launching soon on Algorand</p>
+              <img src={AlgorandLogo} className="App-logo" alt="Algo logo" />
               {/* <p>OFFICIAL Algorand ID: 1813993557</p> */}
               <br />
-{/*               <p> <span className="flash-text">Be sure to ONLY use this contract address<br />and asset ID and DO NOT search by name<br /> due to multiple <br />scam projects
+              {/* <p> <span className="flash-text">Be sure to ONLY use this contract address<br />and asset ID and DO NOT search by name<br /> due to multiple <br />scam projects
               with similar name and picture!</span>
               </p> */}
                 <br />
