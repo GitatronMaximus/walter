@@ -27,7 +27,7 @@ function App() {
             <section>
             <h1>Welcome to Walter's World</h1>
               {/* <p>OFFICIAL solana contract address: ADu7Da8Thv9CBwYdXXcoWnw<br />UXD5MWRs9APr3Fqxiwc2U</p> */}
-              <p>Launching soon on Algorand</p>cd 
+              <p>Launching soon on Algorand</p> 
               <img src={AlgorandLogo} className="App-logo" alt="Algo logo" />
               {/* <p>OFFICIAL Algorand ID: 1813993557</p> */}
               <br />
