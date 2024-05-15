@@ -27,7 +27,7 @@ function App() {
             <section>
             <h1>Welcome to Walter's World</h1>
               {/* <p>OFFICIAL solana contract address: ADu7Da8Thv9CBwYdXXcoWnw<br />UXD5MWRs9APr3Fqxiwc2U</p> */}
-              <p>Launching soon on Algorand</p>
+              <p>Launching soon on Algorand</p>cd 
               <img src={AlgorandLogo} className="App-logo" alt="Algo logo" />
               {/* <p>OFFICIAL Algorand ID: 1813993557</p> */}
               <br />
@@ -62,7 +62,7 @@ function App() {
                 <ul class="no-bullets sophisticated-list">
                   <li>Walter's Wisdom: Daily doses of Walter's unique perspective...</li>
                   <li>Community Engagement: Interactive features where fans can share their own 'Walter moments'...</li>
-                  <li>Walter Rewards: 4% of total supply reserved explicitly for community airdrops and prizes</li>
+                  <li>Walter Rewards: 5% of total supply reserved explicitly for community airdrops and prizes</li>
                   <li>Walter's Wisdom: Dipping a mere 1% from our developers' stash to sow seeds of goodwill! We're channeling<br /> 
                   this slice of our treasure trove into scholarships and preventive maintenance programs, <br />ensuring our growth 
                   sprouts benefits not just for us, but for the community garden at large. Let's cultivate a legacy of giving, <br />
