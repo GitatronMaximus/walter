@@ -6,7 +6,7 @@ import { faTwitter, faTelegramPlane, faTiktok } from '@fortawesome/free-brands-s
 
 function Footer() {
   return (
-    <footer className="App-footer">
+    <footer className="App-footer" className="content-bubble3">
       <img src={WalterBanner} className="App-logo" alt="Walter banner" />
       <br />
       <br />

@@ -1,10 +1,61 @@
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; 
+  background-size: cover;
+  object-fit: cover; /* Cover the entire area without stretching */
+}
+
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
+}
+
+.content-bubble {
+  background-color: #1b1ed0; /* Light grey background */
+  padding: 10px; /* Spacious padding around the content */
+  margin: 200px 0; /* Vertical spacing between bubbles */
+  border-radius: 10px; /* Rounded corners for the bubble */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Align text to the left inside the bubble */
+  width: 90%; /* Manageable width */
+  max-width: 800px; /* Maximum width */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.content-bubble2 {
+  background-color: #1b1ed0; /* Light grey background */
+  padding: 10px; /* Spacious padding around the content */
+  margin: 200px 0; /* Vertical spacing between bubbles */
+  border-radius: 10px; /* Rounded corners for the bubble */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: inline-block; /* Allows the bubble to shrink/grow with content */
+  text-align: center; /* Align text to the left inside the bubble */
+  max-width: 800px; /* Maximum width */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.content-bubble3 {
+  background-color: #1c1c1d; /* Light grey background */
+  padding: 10px; /* Spacious padding around the content */
+  margin: 200px 0; /* Vertical spacing between bubbles */
+  border-radius: 10px; /* Rounded corners for the bubble */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: inline-block; /* Allows the bubble to shrink/grow with content */
+  text-align: center; /* Align text to the left inside the bubble */
+  max-width: 800px; /* Maximum width */
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,14 +65,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: transparent;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(15, 41, 241);
+  pad: 20px;
 }
 
 .App-link {
@@ -189,7 +241,7 @@
 
 .sophisticated-list {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sophisticated font */
-  color: #333; /* Elegant text color */
+  color: white; /* Elegant text color */
 }
 
 .sophisticated-list li {

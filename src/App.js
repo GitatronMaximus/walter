@@ -14,7 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faTelegramPlane, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 
-
 function App() {
   usePreventImageDownload();
   
@@ -22,14 +21,20 @@ function App() {
       <div className="App">
         <div className="siren-container">
         <div className="siren-light"></div>
+        <video autoPlay muted loop id="backgroundVideo">
+          <source src={`${process.env.PUBLIC_URL}/Videos/SuperDog.mp4`} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         </div>
-          <header className="App-header">
+          <header className="App-header" className="content-bubble3">
             <section>
-            <h1>Welcome to Walter's World</h1>
+            <h1>WalterTheWise Token </h1>
               {/* <p>OFFICIAL solana contract address: ADu7Da8Thv9CBwYdXXcoWnw<br />UXD5MWRs9APr3Fqxiwc2U</p> */}
-              <p>Launching soon on Algorand</p> 
+              {/* <p>Launching soon on Algorand</p> 
+              <img src={AlgorandLogo} className="App-logo" alt="Algo logo" /> */}
+              <p>OFFICIAL Algorand ID: 1813993557</p>
               <img src={AlgorandLogo} className="App-logo" alt="Algo logo" />
-              {/* <p>OFFICIAL Algorand ID: 1813993557</p> */}
+
               <br />
               {/* <p> <span className="flash-text">Be sure to ONLY use this contract address<br />and asset ID and DO NOT search by name<br /> due to multiple <br />scam projects
               with similar name and picture!</span>
@@ -42,22 +47,22 @@ function App() {
                 <br />
             </section>
 
-              <p>Dive Into the Whimsical World of Walter, Where Simplicity Meets Genius</p>
-              <img src={WalterProfile2} className="dance-image" alt="Walter Profile 1" />
+              {/* <p>Dive Into the Whimsical World of Walter, Where Simplicity Meets Genius</p>
+              <img src={WalterProfile2} className="dance-image" alt="Walter Profile 1" /> */}
           </header>
-              <section id="origin-story">
+              <section id="origin-story"  className="content-bubble" classname="bubble-container">
                 <h2>The Walter Origin Story</h2>
                 <p>Walter, a Bull Terrier with an oddly human expression, became an internet sensation overnight...</p>
-                <img src={WalterProfile3} className="App-logo" alt="Walter Profile 1" />
+                {/* <img src={WalterProfile3} className="App-logo" alt="Walter Profile 1" /> */}
 
               </section>
               
-              <section id="philosophy">
+              <section id="philosophy"  className="content-bubble">
                 <h2>Walter's Philosophy</h2>
                 <p>In Walter's World, we celebrate the beauty of the mundane and the wisdom found in simplicity...</p>
               </section>
 
-              <section id="offerings">
+              <section id="offerings" className="content-bubble">
                 <h2>What We Offer</h2>
                 <ul class="no-bullets sophisticated-list">
                   <li>Walter's Wisdom: Daily doses of Walter's unique perspective...</li>
@@ -70,7 +75,7 @@ function App() {
                 </ul>
               </section>
 
-              <section id="join">
+              <section id="join" className="content-bubble">
                 <h2>Joining the Pack</h2>
                 <p>Embark on a journey with "Walter's World," where every moment is a treasure trove of insight. 
                 It's not just a meme; it's a movement <br /> that celebrates the simple joys and silent wisdom of life. Dive deeper, 
@@ -132,11 +137,8 @@ function App() {
             <div>
               <Footer />
             </div>
-        
-        <p>Ready to find joy in the simple things? Join Walter's World today and start seeing life through Walter's wise, whimsical eyes.
-        </p>
         <br />
-        <h4>Terms and Conditions</h4>
+        {/* <h4>Terms and Conditions</h4>
             <p>
                 Welcome to WalterTheWise! These terms and conditions outline the rules and regulations for the use of 
                 WalterTheWise's Website, located at https://walterthewise.site.
@@ -174,7 +176,7 @@ function App() {
 
         Contact Information
         "If you have any questions or concerns about our practices, please contact us at support@walterthewise.site."
-            </p>
+            </p> */}
             <br />
             <br />
       </div>
