@@ -7,7 +7,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;  
-  object-position: center;  
+  object-position: top;  
   z-index: -100;
   background-size: cover;
 }
@@ -67,7 +67,6 @@
 
 .App-header {
   background-color: transparent;
-  min-height: 100vh;
   width: 100%; /* Ensure the header spans the full width */
   display: flex;
   flex-direction: column;
@@ -312,4 +311,10 @@
 
 .burn-transaction-link:active {
   transform: translateY(1px); /* Push effect when clicked */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
