@@ -2,15 +2,16 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0; 
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center;  
+  z-index: -100;
   background-size: cover;
-  object-fit: cover; /* Cover the entire area without stretching */
 }
+
 
 .App {
   text-align: center;
@@ -66,14 +67,14 @@
 
 .App-header {
   background-color: transparent;
-  min-height: 10vh;
+  min-height: 100vh;
+  width: 100%; /* Ensure the header spans the full width */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(15, 41, 241);
-  pad: 20px;
+  padding: 20px; /* Proper padding property */
+  box-sizing: border-box;
 }
 
 .App-link {

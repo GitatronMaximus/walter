@@ -26,7 +26,7 @@ function App() {
           Your browser does not support the video tag.
         </video>
         </div>
-          <header className="App-header" className="content-bubble3">
+          <header className="App-header content-bubble3">
             <section>
             <h1>WalterTheWise Token </h1>
               {/* <p>OFFICIAL solana contract address: ADu7Da8Thv9CBwYdXXcoWnw<br />UXD5MWRs9APr3Fqxiwc2U</p> */}
@@ -50,7 +50,7 @@ function App() {
               {/* <p>Dive Into the Whimsical World of Walter, Where Simplicity Meets Genius</p>
               <img src={WalterProfile2} className="dance-image" alt="Walter Profile 1" /> */}
           </header>
-              <section id="origin-story"  className="content-bubble" classname="bubble-container">
+              <section id="origin-story"  className="content-bubble bubble-container">
                 <h2>The Walter Origin Story</h2>
                 <p>Walter, a Bull Terrier with an oddly human expression, became an internet sensation overnight...</p>
                 {/* <img src={WalterProfile3} className="App-logo" alt="Walter Profile 1" /> */}

@@ -6,7 +6,7 @@ import { faTwitter, faTelegramPlane, faTiktok } from '@fortawesome/free-brands-s
 
 function Footer() {
   return (
-    <footer className="App-footer" className="content-bubble3">
+    <footer className="App-footer content-bubble3">
       <img src={WalterBanner} className="App-logo" alt="Walter banner" />
       <br />
       <br />
@@ -22,7 +22,7 @@ function Footer() {
           </a>
         </div>
       <br />
-      © {new Date().getFullYear()} Walter Coin. All rights reserved.
+      © {new Date().getFullYear()} Walter Token. All rights reserved.
     </footer>
   );
 }
