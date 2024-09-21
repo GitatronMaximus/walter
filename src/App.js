@@ -30,20 +30,30 @@ function App() {
             <section>
             <h1>WalterTheWise Token </h1>
               {/* <p>OFFICIAL solana contract address: ADu7Da8Thv9CBwYdXXcoWnw<br />UXD5MWRs9APr3Fqxiwc2U</p> */}
-              {/* <p>Launching soon on Algorand</p> 
+               <br />
+              <img src={WalterProfile2} className="App-logo" alt="Algo logo" />
+              
+              {/* <p>OFFICIAL Algorand ID: 1813993557</p> */}
+              <br />
+              {/* <p>Presale <span style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>L I V E </span></p> */}
+              <br />
+                  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
+                  <span style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>Join Presale NOW</span>
+                  </a>
+                <br />
+              {/* <p>OFFICIAL Algorand ID: 1813993557</p>
               <img src={AlgorandLogo} className="App-logo" alt="Algo logo" /> */}
-              <p>OFFICIAL Algorand ID: 1813993557</p>
-              <img src={AlgorandLogo} className="App-logo" alt="Algo logo" />
+              
 
               <br />
               {/* <p> <span className="flash-text">Be sure to ONLY use this contract address<br />and asset ID and DO NOT search by name<br /> due to multiple <br />scam projects
               with similar name and picture!</span>
               </p> */}
-                <br />
-                  {/* <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
-                    Buy on Raydium
-                  </a> */}
-                <br />
+                {/* <br />
+                  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
+                    Join Presale
+                  </a>
+                <br /> */}
                 <br />
             </section>
 
