@@ -1,7 +1,7 @@
 import React from 'react';
 import WalterBanner from './Assets/WalterBanner.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTelegramPlane, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faTelegramPlane, faTiktok, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 
 function Footer() {
@@ -14,8 +14,8 @@ function Footer() {
           <a href="https://twitter.com/Walter_TheWise" className="social-link" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTwitter} />
           </a>         
-          <a href="https://t.me/WalterTheWise" className="social-link" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faTelegramPlane} />
+          <a href="https://discord.gg/YxGjdusu" className="social-link" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faDiscord} />
           </a>
           <a href="https://www.tiktok.com/@walter_thewise" className="social-link" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faTiktok} />

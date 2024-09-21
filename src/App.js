@@ -16,6 +16,25 @@ import { faTwitter, faTelegramPlane, faTiktok, faDiscord } from '@fortawesome/fr
 
 function App() {
   usePreventImageDownload();
+  // Disable right-click, F12, and Ctrl+Shift+I
+  useEffect(() => {
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    const disableDevTools = (e) => {
+      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+      }
+    };
+
+    document.addEventListener('keydown', disableDevTools);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      document.removeEventListener('contextmenu', event => event.preventDefault());
+      document.removeEventListener('keydown', disableDevTools);
+    };
+  }, []); // Empty dependency array means the effect runs once when the component is mounted
   
     return (
       <div className="App">
