@@ -11,7 +11,7 @@ import WalterBurnInitialLiquidity from './Assets/WalterBurnInitialLiquidity.png'
 import usePreventImageDownload from './usePreventImageDownload.js';
 import Footer from './footer.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTelegramPlane, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faTelegramPlane, faTiktok, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
               <br />
               {/* <p>Presale <span style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>L I V E </span></p> */}
               <br />
-                  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
+                  <a href="https://vestige.fi/launchpad/2310198499" target="_blank" rel="noopener noreferrer" className="link raydium">
                   <span style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>Join Presale NOW</span>
                   </a>
                 <br />
@@ -49,11 +49,11 @@ function App() {
               {/* <p> <span className="flash-text">Be sure to ONLY use this contract address<br />and asset ID and DO NOT search by name<br /> due to multiple <br />scam projects
               with similar name and picture!</span>
               </p> */}
-                {/* <br />
-                  <a href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=ADu7Da8Thv9CBwYdXXcoWnwUXD5MWRs9APr3Fqxiwc2U&inputAmount=0&fixed=in" target="_blank" rel="noopener noreferrer" className="link raydium">
-                    Join Presale
+                <br />
+                  <a href="https://app.nf.domains/name/thewise.algo" target="_blank" rel="noopener noreferrer" className="link raydium">
+                  <span style={{ color: '#00ff00', textShadow: '0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00' }}>Claim Segments</span>
                   </a>
-                <br /> */}
+                <br />
                 <br />
             </section>
 
@@ -96,8 +96,8 @@ function App() {
                 <a href="https://twitter.com/Walter_TheWise" className="social-link" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTwitter} className="large-icon" />
                 </a>         
-                <a href="https://t.me/WalterTheWise" className="social-link" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faTelegramPlane} className="large-icon" />
+                <a href="https://discord.gg/YxGjdusu" className="social-link" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faDiscord} className="large-icon" />
                 </a>
                 <a href="https://www.tiktok.com/@walter_thewise" className="social-link" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faTiktok} className="large-icon" />

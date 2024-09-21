@@ -157,8 +157,8 @@
   color: #1DA1F2; /* Twitter brand color */
 }
 
-.social-link .fa-telegram-plane {
-  color: #0088cc; /* Telegram brand color */
+.social-link .fa-discord-plane {
+  color: #dce2e5; /* Discord brand color */
 }
 
 .social-link .fa-tiktok {
@@ -202,13 +202,13 @@
 }
 
 .raydium {
-  background-color: #273c75; /* Gold */
+  background-color: #1445ca; /* Gold */
   color: #bdc3c7; /* Dark Green */
   border: 1px solid #FFD700; /* Gold border */
 }
 
 .raydium:hover {
-  background-color: #8e44ad;
+  background-color: #44ad5b;
 }
 
 .solscan {
