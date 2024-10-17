@@ -23,7 +23,7 @@ const client = new algosdk.Algodv2(token, baseServer, port);
 const appIndex = parseInt(process.env.SMART_CONTRACT_ID);  // Smart contract ID from .env
 const nftId = 2313079846;  // The NFT ASA ID
 const rewardAssetId = 1691271561;  // Reward ASA ID
-const dailyReward = 500000;  // 0.005 tokens in micro-units (for 8 decimals)
+const dailyReward = 1000000;  // 0.005 tokens in micro-units (for 8 decimals)
 
 // Get private key from environment variables
 const walletPrivateKey = process.env.SENDER_PRIVATE_KEY;
@@ -243,7 +243,7 @@ function App() {
           <a href="https://twitter.com/Walter_TheWise" target="_blank" rel="noopener noreferrer" className="social-link">
             <FontAwesomeIcon icon={faTwitter} className="large-icon" />
           </a>
-          <a href="https://discord.gg/YxGjdusu" target="_blank" rel="noopener noreferrer" className="social-link">
+          <a href="https://discord.gg/3qdmqGNb" target="_blank" rel="noopener noreferrer" className="social-link">
             <FontAwesomeIcon icon={faDiscord} className="large-icon" />
           </a>
           <a href="https://www.tiktok.com/@walter_thewise" target="_blank" rel="noopener noreferrer" className="social-link">
