@@ -55,44 +55,50 @@ function App() {
   };
 
   // Defly Wallet connection handler with WalletConnect
-  const connectDeflyWallet = async () => {
-    try {
-      const walletConnect = new WalletConnect({
-        bridge: "https://bridge.walletconnect.org"
-      });
+  // const connectDeflyWallet = async () => {
+  //   try {
+  //     const walletConnect = new WalletConnect({
+  //       bridge: "https://bridge.walletconnect.org" // Use the WalletConnect bridge URL
+  //     });
 
-      if (!walletConnect.connected) {
-        if (isMobile()) {
-          const uri = await walletConnect.createSession();
-          const deepLink = `defly://wc?uri=${encodeURIComponent(walletConnect.uri)}`;
-          window.location.href = deepLink;
-        } else {
-          walletConnect.createSession().then(() => {
-            const uri = walletConnect.uri;
-            QRCodeModal.open(uri);
-          });
-        }
-      }
+  //     // Check if the wallet is already connected
+  //     if (!walletConnect.connected) {
+  //       // If not connected, create a new session
+  //       if (isMobile()) {
+  //         const uri = await walletConnect.createSession(); // Create a session for mobile
+  //         const deepLink = `defly://wc?uri=${encodeURIComponent(walletConnect.uri)}`;
+  //         window.location.href = deepLink; // Redirect to Defly Wallet via deep link
+  //       } else {
+  //         // Create session for desktop
+  //         walletConnect.createSession().then(() => {
+  //           const uri = walletConnect.uri;
+  //           QRCodeModal.open(uri); // Show QR code for desktop connection
+  //         });
+  //       }
+  //     }
 
-      walletConnect.on("connect", (error, payload) => {
-        if (error) {
-          console.error("Error connecting to Defly Wallet:", error);
-          return;
-        }
-        const { accounts } = payload.params[0];
-        setWalletAddress(accounts[0]);
-        setSelectedWallet('Defly Wallet');
-        QRCodeModal.close();
-      });
+  //     // Listen for connection events
+  //     walletConnect.on("connect", (error, payload) => {
+  //       if (error) {
+  //         console.error("Error connecting to Defly Wallet:", error);
+  //         return;
+  //       }
+  //       const { accounts } = payload.params[0];
+  //       setWalletAddress(accounts[0]);
+  //       setSelectedWallet('Defly Wallet');
+  //       QRCodeModal.close(); // Close the QR code modal once connected
+  //     });
 
-      walletConnect.on("disconnect", () => {
-        setWalletAddress(null);
-        setSelectedWallet(null);
-      });
-    } catch (error) {
-      console.error("Failed to connect Defly Wallet:", error);
-    }
-  };
+  //     walletConnect.on("disconnect", () => {
+  //       setWalletAddress(null);
+  //       setSelectedWallet(null);
+  //       console.log("Disconnected from Defly Wallet");
+  //     });
+  //   } catch (error) {
+  //     console.error("Failed to connect to Defly Wallet:", error);
+  //   }
+  // };
+
 
   // Function to disconnect the wallet
   const disconnectWallet = () => {
@@ -186,7 +192,7 @@ function App() {
 
         <div style={{ margin: '20px 0' }}>
           <Button variant="contained" onClick={connectPeraWallet} style={{ margin: '5px' }}>Connect Pera Wallet</Button>
-          <Button variant="contained" onClick={connectDeflyWallet} style={{ margin: '5px' }}>Connect Defly Wallet</Button>
+          {/* <Button variant="contained" onClick={connectDeflyWallet} style={{ margin: '5px' }}>Connect Defly Wallet</Button> */}
         </div>
 
         {/* Show connected wallet address */}
@@ -212,8 +218,8 @@ function App() {
 
         {/* Display staking and rewards status */}
         <div>
-          <p>Staking Status: {stakingStatus}</p>
-          <p>Available Rewards: {rewardsAmount}</p>
+          <p><Button variant="contained" style={{ margin: '10px' }}>Staking Status: {stakingStatus}</Button></p>
+          <p><Button variant="contained" style={{ margin: '10px' }}>Available Rewards: {rewardsAmount}</Button></p>
         </div>
 
         {/* Presale and Claim Buttons */}
