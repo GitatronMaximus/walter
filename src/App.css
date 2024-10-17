@@ -24,19 +24,19 @@
 }
 
 .content-bubble {
-  background-color: #1b1ed0; /* Light grey background */
+  background-color: #121219; /* Light grey background */
   padding: 10px; /* Spacious padding around the content */
   margin: 200px 0; /* Vertical spacing between bubbles */
   border-radius: 10px; /* Rounded corners for the bubble */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   text-align: center; /* Align text to the left inside the bubble */
   width: 90%; /* Manageable width */
-  max-width: 800px; /* Maximum width */
+  max-width: 400px; /* Maximum width */
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
 .content-bubble2 {
-  background-color: #1b1ed0; /* Light grey background */
+  background-color: #22222e; /* Light grey background */
   padding: 10px; /* Spacious padding around the content */
   margin: 200px 0; /* Vertical spacing between bubbles */
   border-radius: 10px; /* Rounded corners for the bubble */
@@ -252,7 +252,7 @@
 
 .sophisticated-list li:before {
   content: '✦'; /* Custom bullet symbol */
-  color: #007bff; /* Bullet color */
+  color: #24292f; /* Bullet color */
   font-weight: bold; /* Make the bullet symbol bolder */
   position: absolute; /* Positioning before the text */
   left: -20px; /* Adjust as necessary */
@@ -317,4 +317,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.wallet-info {
+  background-color: rgba(0, 0, 0, 0.8);  /* Dark transparent background */
+  padding: 15px;
+  border-radius: 10px;
+  color: #00ff00;  /* Bright green text color */
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.App-header .wallet-info Button {
+  background-color: #ff6347;  /* Disconnect button color */
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
 }

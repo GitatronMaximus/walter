@@ -22,7 +22,7 @@ function Footer() {
           </a>
         </div>
       <br />
-      © {new Date().getFullYear()} Walter Token. All rights reserved.
+      © {new Date().getFullYear()} Developed by Gitatron for WalterTheWise. All rights reserved.
     </footer>
   );
 }
