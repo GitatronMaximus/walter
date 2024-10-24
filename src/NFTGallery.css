@@ -1,0 +1,36 @@
+/* Style for the header box */
+.nft-header-box {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.nft-header-box h2 {
+  color: white;
+  font-family: inherit;  /* Ensure the font matches the rest of the text */
+  font-size: 1.5em;  /* Adjust size as needed */
+}
+
+/* Existing style for the NFT gallery */
+.nft-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nft-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.nft-name-box {
+  background-color: black;
+  padding: 5px;
+  color: white;
+  border-radius: 4px;
+  margin-top: 10px;
+}
