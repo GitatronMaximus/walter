@@ -159,7 +159,8 @@ function App() {
 
       <header className="App-header">
         <img src={WalterProfile2} className="App-logo" alt="Walter logo" />
-        <h1>WalterTheWise Staking DApp (under construction)</h1>
+        <br /><br />
+        <h1 className="graffiti-title">Walter The Wise <br /><br /></h1>
 
         <div style={{ margin: '20px 0' }}>
           <Button variant="contained" onClick={connectPeraWallet} style={{ margin: '5px' }}>Connect Pera Wallet</Button>

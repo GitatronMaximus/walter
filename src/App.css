@@ -367,3 +367,18 @@
   transform: scale(1.05); /* Slightly enlarges button on hover */
   background-color: #0d0daf; /* Darker shade for hover */
 }
+
+@font-face {
+  font-family: 'MyGraffitiFont'; /* Custom name for your font */
+  src: url('../public/Fonts/Graffiti.ttf') format('truetype'); /* Adjust path if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.graffiti-title {
+  font-family: 'MyGraffitiFont', sans-serif; /* Fallback to sans-serif */
+  font-size: 5rem; /* Adjust size */
+  color: #FF6347;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 5.5);
+}
+
