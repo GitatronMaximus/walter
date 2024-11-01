@@ -10,25 +10,29 @@ import algosdk from 'algosdk';  // Import Algorand SDK
 import NFTGallery from './components/NFTGallery';  // Import the new component
 import NftImage from './Assets/nft-image.png';  // Local image for NFT
 
+
 // Algorand client settings
-const baseServer = process.env.NODELY_API;  // Use your indexer URL from .env
+console.log('NODELY_API:', process.env.REACT_APP_NODELY_API);
+
+const baseServer = process.env.REACT_APP_NODELY_API || 'https://mainnet-api.4160.nodely.dev';  // Use your indexer URL from .env
 const port = '';
 const token = ''; // No token for Nodely
 const client = new algosdk.Algodv2(token, baseServer, port);
 
 // Nodely Indexer client settings
-const indexerBaseServer = process.env.ALGOD_INDEXER_URL;  // Nodely indexer URL
+const indexerBaseServer = process.env.REACT_APP_ALGOD_INDEXER_URL;  // Nodely indexer URL
 
 // Initialize Indexer client without a token
 const indexerClient = new algosdk.Indexer('', indexerBaseServer, port);
 
-const appIndex = parseInt(process.env.SMART_CONTRACT_ID);  // Smart contract ID from .env
+const appIndex = 2375265094;  // Smart contract ID from .env
+console.log('appIndex:', appIndex);
 const nftId = 2313079846;  // The NFT ASA ID
 const rewardAssetId = 1691271561;  // Reward ASA ID
 const dailyReward = 1000000;  // 0.005 tokens in micro-units (for 8 decimals)
 
 // Get private key from environment variables
-const walletPrivateKey = process.env.SENDER_PRIVATE_KEY;
+const walletPrivateKey = process.env.REACT_APP_SENDER_PRIVATE_KEY;
 
 function App() {
   const [walletAddress, setWalletAddress] = useState(null);
@@ -39,38 +43,21 @@ function App() {
 
   // Fetch NFTs based on the ASA ID
   const fetchNFTs = async () => {
-    if (!walletAddress) {
-      setNfts([]);  // Clear NFTs if no wallet connected
-      return;
-    }
-  
     try {
-      // Fetch wallet's assets
-      const accountInfo = await client.accountInformation(walletAddress).do();
-  
-      // Check if the wallet holds the specific NFT (nftId)
-      const ownsNFT = accountInfo.assets.some(asset => asset['asset-id'] === nftId);
-  
-      if (ownsNFT) {
-        // If the wallet owns the NFT, display it
-        const nftData = [
-          {
-            id: nftId,
-            name: 'Walter The Wise NFT',
-            image: NftImage,  // Use the local image
-          },
-        ];
-  
-        setNfts(nftData);  // Set the NFT data
-      } else {
-        // If the wallet doesn't own the NFT, clear the NFT display
-        setNfts([]);
-      }
+      // You can replace this with real data fetch logic, but here we simulate fetching data
+      const nftData = [
+        {
+          id: nftId,
+          name: 'Walter The Wise NFT',  // NFT name
+          image: NftImage,  // Use the local image file
+        },
+      ];
+
+      setNfts(nftData);  // Set the fetched NFT data to the state
     } catch (error) {
-      console.error('Failed to fetch NFT or account info:', error);
+      console.error('Failed to fetch NFT data:', error);
     }
   };
-  
 
   // Fetch NFTs on component mount
   useEffect(() => {
@@ -96,22 +83,7 @@ function App() {
     }
   };
   
-  useEffect(() => {
-    if (walletAddress) {
-      localStorage.setItem('walletAddress', walletAddress);
-      localStorage.setItem('selectedWallet', selectedWallet);
-    }
-  }, [walletAddress, selectedWallet]);
   
-  useEffect(() => {
-    const savedWalletAddress = localStorage.getItem('walletAddress');
-    const savedSelectedWallet = localStorage.getItem('selectedWallet');
-  
-    if (savedWalletAddress && savedSelectedWallet) {
-      setWalletAddress(savedWalletAddress);
-      setSelectedWallet(savedSelectedWallet);
-    }
-  }, []);  
 
   const disconnectWallet = () => {
     setWalletAddress(null);
@@ -146,6 +118,11 @@ function App() {
       const params = await client.getTransactionParams().do();
       console.log('Transaction parameters:', params);
   
+      // Ensure appIndex is valid
+      if (!appIndex || appIndex <= 0) {
+        throw new Error('Invalid appIndex for staking transaction');
+      }
+  
       // Construct the transaction
       const txn = algosdk.makeApplicationNoOpTxnFromObject({
         from: walletAddress,
@@ -155,10 +132,9 @@ function App() {
         suggestedParams: params,
       });
   
-      // Sign the transaction with the private key
-      const signedTxn = txn.signTxn(algosdk.mnemonicToSecretKey(walletPrivateKey).sk);
-  
-      // Send the signed transaction
+      // Sign and send transaction
+      const secretKey = algosdk.mnemonicToSecretKey(walletPrivateKey).sk;
+      const signedTxn = txn.signTxn(secretKey);
       const txId = await client.sendRawTransaction(signedTxn).do();
       console.log('Transaction ID:', txId);
   
@@ -168,6 +144,7 @@ function App() {
       setStakingStatus('Failed to stake NFT');
     }
   };
+  
   
 
   return (
@@ -179,15 +156,15 @@ function App() {
           Your browser does not support the video tag.
         </video>
       </div>
-  
+
       <header className="App-header">
         <img src={WalterProfile2} className="App-logo" alt="Walter logo" />
         <h1>WalterTheWise Staking DApp (under construction)</h1>
-  
+
         <div style={{ margin: '20px 0' }}>
           <Button variant="contained" onClick={connectPeraWallet} style={{ margin: '5px' }}>Connect Pera Wallet</Button>
         </div>
-  
+
         {walletAddress && (
           <div className="wallet-info">
             <p className="wallet-text">
@@ -198,43 +175,29 @@ function App() {
             </Button>
           </div>
         )}
-  
+
         {walletAddress && (
-          <div>
-            <h2 style={{ backgroundColor: 'black', color: 'white', padding: '10px' }}>Your NFTs</h2>
-            {nfts.length > 0 ? (
-              <div className="nft-gallery">
-                {nfts.map((nft) => (
-                  <div key={nft.id} className="nft-item">
-                    <img src={nft.image} alt={nft.name} />
-                    <div className="nft-name-box">
-                      <p>{nft.name}</p>
-                    </div>
-                    <button onClick={() => onStake(nft.id)}>Stake</button>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="no-nft-message" style={{ backgroundColor: 'black', color: 'white', padding: '10px' }}>
-                <p>You must own an eligible NFT to stake on this platform.</p>
-              </div>
-            )}
-          </div>
+          <NFTGallery nfts={nfts} onStake={onStake} />
         )}
 
-  
         {/* Display staking and rewards status */}
         <div>
           <p><Button variant="contained" style={{ margin: '10px' }}>Staking Status: {stakingStatus}</Button></p>
           <p><Button variant="contained" style={{ margin: '10px' }}>Available Rewards: {rewardsAmount}</Button></p>
         </div>
       </header>
-  
-      <section id="walter-story" className="content-bubble">
+
+      <section id="walter-story" className="content-bubble"> 
         <h2>The Walter Story</h2>
         <p>
           Walter, a Bull Terrier with an oddly human expression, became an internet sensation overnight.
         </p>
+        <br />
+        <div className="buy-button">
+          <a href="https://app.tinyman.org/swap?asset_in=0&asset_out=1813993557&use_router=true" target="_blank" rel="noopener noreferrer" className="buy-link">
+            <button className="buy-walt-button">Buy $WALT</button>
+          </a>
+        </div>
         <br />
         <h2>Join the Community</h2>
         <div className="social-icons">
@@ -248,12 +211,13 @@ function App() {
             <FontAwesomeIcon icon={faTiktok} className="large-icon" />
           </a>
         </div>
+        <br />        
       </section>
-  
+
+
       <Footer />
     </div>
   );
-  
 }
 
 export default App;

@@ -352,3 +352,18 @@
   margin: 0 auto;
 }
 
+.buy-walt-button {
+  font-size: 1.5rem; /* Increases the font size */
+  padding: 1rem 2rem; /* Adds padding for a larger button */
+  background-color: #1363cc; /* Custom button color */
+  color: #fff; /* Text color */
+  border: none; /* Removes default border */
+  border-radius: 8px; /* Rounds the button corners */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.buy-walt-button:hover {
+  transform: scale(1.05); /* Slightly enlarges button on hover */
+  background-color: #0d0daf; /* Darker shade for hover */
+}
