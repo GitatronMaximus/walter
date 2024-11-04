@@ -198,6 +198,11 @@ function App() {
           <a href="https://app.tinyman.org/swap?asset_in=0&asset_out=1813993557&use_router=true" target="_blank" rel="noopener noreferrer" className="buy-link">
             <button className="buy-walt-button">Buy $WALT</button>
           </a>
+          <br />
+          <br />
+          <a href="https://app.nf.domains/name/thewise.algo?view=segments" target="_blank" rel="noopener noreferrer" className="segment-link">
+            <button className="buy-walt-button">GET A SEGMENT</button>
+          </a>
         </div>
         <br />
         <h2>Join the Community</h2>
