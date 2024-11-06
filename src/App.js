@@ -25,7 +25,7 @@ const indexerBaseServer = process.env.REACT_APP_ALGOD_INDEXER_URL;  // Nodely in
 // Initialize Indexer client without a token
 const indexerClient = new algosdk.Indexer('', indexerBaseServer, port);
 
-const appIndex = 2375265094;  // Smart contract ID from .env
+const appIndex = process.env.REACT_APP_SMART_CONTRACT_ID;  // Smart contract ID from .env
 console.log('appIndex:', appIndex);
 const nftId = 2313079846;  // The NFT ASA ID
 const rewardAssetId = 1691271561;  // Reward ASA ID
