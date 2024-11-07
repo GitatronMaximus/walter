@@ -25,7 +25,7 @@ const indexerBaseServer = process.env.REACT_APP_ALGOD_INDEXER_URL;  // Nodely in
 // Initialize Indexer client without a token
 const indexerClient = new algosdk.Indexer('', indexerBaseServer, port);
 
-const appIndex = process.env.REACT_APP_SMART_CONTRACT_ID;  // Smart contract ID from .env
+const appIndex = 2455820802;  // Smart contract ID from .env
 console.log('appIndex:', appIndex);
 const nftId = 2313079846;  // The NFT ASA ID
 const rewardAssetId = 1691271561;  // Reward ASA ID
@@ -66,22 +66,24 @@ function App() {
 
   const connectPeraWallet = async () => {
     const peraWallet = new PeraWalletConnect();
+
     try {
-      // Check if a session already exists
-      if (peraWallet.isConnected) {
-        console.log('Wallet session already connected');
+        // If the wallet is connected, disconnect it first to clear any previous session.
+        if (peraWallet.isConnected) {
+            console.log('Existing wallet session detected. Disconnecting...');
+            await peraWallet.disconnect();
+        }
+
+        // Now, attempt to connect.
+        const accounts = await peraWallet.connect();
+        setWalletAddress(accounts[0]);
         setSelectedWallet('Pera Wallet');
-        setWalletAddress(peraWallet.getAccounts()[0]);
-        return;
-      }
-  
-      const accounts = await peraWallet.connect();
-      setWalletAddress(accounts[0]);
-      setSelectedWallet('Pera Wallet');
+        console.log('Wallet connected successfully.');
     } catch (err) {
-      console.error('Failed to connect Pera Wallet:', err);
+        console.error('Failed to connect Pera Wallet:', err);
     }
-  };
+};
+
   
   
 
@@ -144,6 +146,27 @@ function App() {
       setStakingStatus('Failed to stake NFT');
     }
   };
+
+  // Unstake function
+  const onUnstake = async () => {
+    try {
+      const params = await client.getTransactionParams().do();
+      const txn = algosdk.makeApplicationNoOpTxnFromObject({
+        from: walletAddress,
+        appIndex: appIndex,
+        appArgs: [new Uint8Array(Buffer.from('unstake'))],
+        suggestedParams: params,
+      });
+      const secretKey = algosdk.mnemonicToSecretKey(walletPrivateKey).sk;
+      const signedTxn = txn.signTxn(secretKey);
+      const txId = await client.sendRawTransaction(signedTxn).do();
+      console.log('Transaction ID:', txId);
+      setStakingStatus('NFT unstaked successfully');
+    } catch (error) {
+      console.error('Error unstaking NFT:', error);
+      setStakingStatus('Failed to unstake NFT');
+    }
+  };
   
   
 
@@ -182,9 +205,24 @@ function App() {
         )}
 
         {/* Display staking and rewards status */}
-        <div>
-          <p><Button variant="contained" style={{ margin: '10px' }}>Staking Status: {stakingStatus}</Button></p>
-          <p><Button variant="contained" style={{ margin: '10px' }}>Available Rewards: {rewardsAmount}</Button></p>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
+          <p>
+            <Button variant="contained" style={{ margin: '10px' }}>
+              Staking Status: {stakingStatus || "Not Staked"}
+            </Button>
+          </p>
+          
+          <p>
+            <Button variant="contained" style={{ margin: '10px' }}>
+              Available Rewards: {rewardsAmount || "0"}
+            </Button>
+          </p>
+
+          {stakingStatus && stakingStatus.includes('staked') && (
+            <Button variant="contained" onClick={onUnstake} style={{ marginTop: '10px' }}>
+              Unstake
+            </Button>
+          )}
         </div>
       </header>
 
