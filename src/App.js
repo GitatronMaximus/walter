@@ -41,6 +41,24 @@ function App() {
   const [rewardsAmount, setRewardsAmount] = useState(null);
   const [nfts, setNfts] = useState([]);  // Store NFTs
 
+  // Fetch rewards based on walletAddress
+  useEffect(() => {
+    const fetchRewards = async () => {
+        try {
+            const staker = walletAddress;
+            if (!staker) return;
+
+            // Call the contract or Indexer to get rewards data
+            const rewards = 0; // Replace with actual rewards fetching logic
+            setRewardsAmount(rewards);
+        } catch (error) {
+            console.error('Failed to fetch rewards:', error);
+        }
+      };
+
+      fetchRewards();
+  }, [walletAddress]);
+
   // Fetch NFTs based on the ASA ID
   const fetchNFTs = async () => {
     try {
