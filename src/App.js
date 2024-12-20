@@ -134,18 +134,18 @@ function App() {
         suggestedParams: params,
       });
   
-      // Sign and send transaction
-      const secretKey = algosdk.mnemonicToSecretKey(walletPrivateKey).sk;
-      const signedTxn = txn.signTxn(secretKey);
+      // Use Pera Wallet to sign the transaction
+      const peraWallet = new PeraWalletConnect();
+      const signedTxn = await peraWallet.signTransaction([txn.toByte()]);
       const txId = await client.sendRawTransaction(signedTxn).do();
+
       console.log('Transaction ID:', txId);
-  
       setStakingStatus(`NFT ${nftId} staked successfully`);
-    } catch (error) {
+  } catch (error) {
       console.error('Error staking NFT:', error);
       setStakingStatus('Failed to stake NFT');
-    }
-  };
+  }
+};
 
   // Unstake function
   const onUnstake = async () => {
