@@ -168,23 +168,29 @@ function App() {
   // Unstake function
   const onUnstake = async () => {
     try {
-      const params = await client.getTransactionParams().do();
-      const txn = algosdk.makeApplicationNoOpTxnFromObject({
-        from: walletAddress,
-        appIndex: appIndex,
-        appArgs: [new Uint8Array(Buffer.from('unstake'))],
-        suggestedParams: params,
-      });
-      const secretKey = algosdk.mnemonicToSecretKey(walletPrivateKey).sk;
-      const signedTxn = txn.signTxn(secretKey);
-      const txId = await client.sendRawTransaction(signedTxn).do();
-      console.log('Transaction ID:', txId);
-      setStakingStatus('NFT unstaked successfully');
+        console.log('Initiating unstake process...');
+        const params = await client.getTransactionParams().do();
+
+        const txn = algosdk.makeApplicationNoOpTxnFromObject({
+            from: walletAddress,
+            appIndex: appIndex,
+            appArgs: [new Uint8Array(Buffer.from('unstake'))],
+            suggestedParams: params,
+        });
+
+        // Use Pera Wallet to sign the transaction dynamically
+        const peraWallet = new PeraWalletConnect();
+        const signedTxn = await peraWallet.signTransaction([txn.toByte()]);
+        const txId = await client.sendRawTransaction(signedTxn).do();
+
+        console.log('Transaction ID:', txId);
+        setStakingStatus('NFT unstaked successfully');
     } catch (error) {
-      console.error('Error unstaking NFT:', error);
-      setStakingStatus('Failed to unstake NFT');
+        console.error('Error unstaking NFT:', error);
+        setStakingStatus('Failed to unstake NFT');
     }
   };
+
   
   
 
