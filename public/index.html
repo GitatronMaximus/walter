@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Google Translate Initialization
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en', // Default language
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+      }
+
+      // Auto-detect browser language and prompt translation
+      document.addEventListener('DOMContentLoaded', function () {
+          const userLang = navigator.language || navigator.userLanguage; // Get browser language
+          const baseLang = 'en'; // Default language of the website
+          if (!userLang.startsWith(baseLang)) {
+              const translatePrompt = document.createElement('div');
+              translatePrompt.style.position = 'fixed';
+              translatePrompt.style.bottom = '10px';
+              translatePrompt.style.right = '10px';
+              translatePrompt.style.backgroundColor = '#4a148c';
+              translatePrompt.style.color = '#fff';
+              translatePrompt.style.padding = '10px';
+              translatePrompt.style.borderRadius = '5px';
+              translatePrompt.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.3)';
+              translatePrompt.innerHTML = `
+                  Deseja traduzir esta página para o seu idioma? 
+                  <button style="margin-left: 10px; background-color: #ffeb3b; color: #4a148c; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;" onclick="googleTranslateElementInit()">Sim</button>
+              `;
+              document.body.appendChild(translatePrompt);
+          }
+      });
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,6 +63,7 @@
     <link rel="icon" type="image/png" href="%PUBLIC_URL%/WalterProfile2.png">
   </head>
   <body>
+    <div id="google_translate_element" style="position: absolute; top: 10px; right: 10px;"></div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -43,5 +76,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div id="google_translate_element" style="position: absolute; top: 10px; right: 10px;"></div>
   </body>
 </html>

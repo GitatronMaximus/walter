@@ -25,7 +25,7 @@ const indexerBaseServer = process.env.REACT_APP_ALGOD_INDEXER_URL;  // Nodely in
 // Initialize Indexer client without a token
 const indexerClient = new algosdk.Indexer('', indexerBaseServer, port);
 
-const appIndex = 2455820802;  // Smart contract ID from .env
+const appIndex = 2622058879;  
 console.log('appIndex:', appIndex);
 const nftId = 2313079846;  // The NFT ASA ID
 const rewardAssetId = 1691271561;  // Reward ASA ID
@@ -153,7 +153,7 @@ function App() {
       });
   
       // Use Pera Wallet to sign the transaction
-      const peraWallet = new PeraWalletConnect();
+      // const peraWallet = new PeraWalletConnect();
       const signedTxn = await peraWallet.signTransaction([txn.toByte()]);
       const txId = await client.sendRawTransaction(signedTxn).do();
 
