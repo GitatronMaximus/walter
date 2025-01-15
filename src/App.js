@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import WalterProfile2 from './Assets/WalterProfile2.png';
 import Footer from './footer.js';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faTiktok, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faTiktok, faDiscord, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { PeraWalletConnect } from '@perawallet/connect';
 import algosdk from 'algosdk';  // Import Algorand SDK
 import NFTGallery from './components/NFTGallery';  // Import the new component
@@ -33,6 +33,7 @@ const dailyReward = 1000000;  // 0.005 tokens in micro-units (for 8 decimals)
 
 // Get private key from environment variables
 const walletPrivateKey = process.env.REACT_APP_SENDER_PRIVATE_KEY;
+const peraWallet = new PeraWalletConnect();
 
 function App() {
   const [walletAddress, setWalletAddress] = useState(null);
@@ -256,9 +257,26 @@ function App() {
           Walter, a Bull Terrier with an oddly human expression, became an internet sensation overnight.
         </p>
         <br />
+        {/* Video Section */}
+        <div className="video-container" style={{ textAlign: 'center', marginBottom: '20px' }}>
+          <video width="80%" controls>
+            <source src={`${process.env.PUBLIC_URL}/Videos/FlippinWalterTheWiseShort.mp4`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className="buy-button">
           <a href="https://app.tinyman.org/swap?asset_in=0&asset_out=1813993557&use_router=true" target="_blank" rel="noopener noreferrer" className="buy-link">
             <button className="buy-walt-button">Buy $WALT</button>
+          </a>
+          <br />
+          <br />
+          <a href="https://app.cometa.farm" target="_blank" rel="noopener noreferrer" className="segment-link">
+            <button className="buy-walt-button">Get WALT-ALGO LP</button>
+          </a>
+          <br />
+          <br />
+          <a href="https://app.cometa.farm" target="_blank" rel="noopener noreferrer" className="segment-link">
+            <button className="buy-walt-button">Stake WALT-ALGO LP for APY</button>
           </a>
           <br />
           <br />
@@ -272,8 +290,8 @@ function App() {
           <a href="https://twitter.com/Walter_TheWise" target="_blank" rel="noopener noreferrer" className="social-link">
             <FontAwesomeIcon icon={faTwitter} className="large-icon" />
           </a>
-          <a href="https://discord.gg/3qdmqGNb" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FontAwesomeIcon icon={faDiscord} className="large-icon" />
+          <a href="https://instagram.com/walter_thewise" target="_blank" rel="noopener noreferrer" className="social-link">
+            <FontAwesomeIcon icon={faInstagram} className="large-icon" />
           </a>
           <a href="https://www.tiktok.com/@walter_thewise" target="_blank" rel="noopener noreferrer" className="social-link">
             <FontAwesomeIcon icon={faTiktok} className="large-icon" />
