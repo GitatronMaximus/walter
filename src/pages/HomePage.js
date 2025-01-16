@@ -1,5 +1,5 @@
 import React from "react";
-import VideoSection from "../components/VideoSection";
+// import VideoSection from "../components/VideoSection";
 import VideoBackground from "../components/VideoBackground";
 import BuyLinks from "../components/BuyLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,7 +21,7 @@ function HomePage() {
       <h2>Join the Walter Movement</h2>
         <p>
           Walter, a Bull Terrier with an oddly human expression, became an
-          internet sensation overnight.
+          internet sensation overnight-and then we flipped him.
         </p>
         <VideoBackground />
         <h2>How to Benefit</h2>
@@ -34,7 +34,7 @@ function HomePage() {
             <br />
             <strong>Step 4:</strong> Secure your <a href="https://app.nf.domains/name/thewise.algo?view=segments" target="_blank" rel="noopener noreferrer"><strong>thewise.algo</strong></a> segment to unlock exclusive benefits like token airdrops, NFTs, and more.
           </p>
-        <VideoSection />
+        {/* <VideoSection /> */}
         <h2>Swap Tokens</h2>
         {/* Tinyman Swap Feature */}
         <div className="tinyman-iframe-container">
