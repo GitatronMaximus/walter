@@ -5,7 +5,7 @@ function NFTGallery({ nfts, onStake }) {
   return (
     <div>
       <div className="nft-header-box"> 
-        <h2>Your NFTs</h2>
+        <h2>Your N F Ts</h2>
       </div>
       <div className="nft-gallery">
         {nfts.map((nft) => (

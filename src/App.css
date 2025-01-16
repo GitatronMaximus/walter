@@ -381,3 +381,15 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 5.5);
 }
 
+.tinyman-iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.tinyman-iframe-container iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
