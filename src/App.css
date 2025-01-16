@@ -58,6 +58,16 @@
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
+.content-bubble a {
+  color: #0d6efd; /* Bootstrap blue or any preferred blue color */
+  text-decoration: none; /* Remove underlines */
+  font-weight: bold; /* Ensure consistency */
+}
+
+.content-bubble a:hover {
+  text-decoration: underline; /* Optional hover effect */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

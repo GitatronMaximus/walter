@@ -25,7 +25,7 @@ function NFTPage() {
   }, []);
 
   return (
-    <div className="graffiti-title">
+    <div className="nft-page-header">
     <VideoBackground />
       <h1>Walter's N F T Collection</h1>
       <NFTGallery nfts={nfts} />

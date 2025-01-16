@@ -4,12 +4,12 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/nfts">NFT Staking</Link></li>
-        <li><Link to="/charts">Live Charts</Link></li>
-      </ul>
+    <nav className="navigation">
+      <div className="nav-links">
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/nfts" className="nav-link">NFT Staking</Link>
+        <Link to="/charts" className="nav-link">Live Charts</Link>
+      </div>
     </nav>
   );
 }

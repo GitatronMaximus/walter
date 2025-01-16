@@ -7,7 +7,7 @@ function ChartPage() {
   return (
     <div className="chart-container">
         <VideoBackground />
-      <h1 className="graffiti-title">Live Chart</h1>
+      <h1 className="graffiti-title">Live Charts</h1>
       <div className="iframe-container">
         <iframe
           src="https://vestige.fi/asset/1813993557"

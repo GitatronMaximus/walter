@@ -1,0 +1,21 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds spacing between the header and translator */
+    flex-wrap: wrap; /* Ensures proper alignment on smaller screens */
+    margin-bottom: 20px; /* Adds spacing below the header */
+  }
+  
+  .graffiti-title {
+    font-family: 'MyGraffitiFont', sans-serif;
+    font-size: 5rem;
+    color: #FF6347;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.55);
+    margin: 0; /* Removes default margin */
+  }
+  
+  .translator-widget {
+    font-size: 1rem; /* Adjusts the size of the translator */
+  }
+  
